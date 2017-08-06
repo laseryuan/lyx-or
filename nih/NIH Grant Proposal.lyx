@@ -1,0 +1,336 @@
+#LyX 1.6.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass nih
+\begin_preamble
+\usepackage{natbib}
+
+% Hyperlink Options
+\usepackage{ifpdf} % part of the hyperref bundle
+\ifpdf % if pdflatex is used
+
+ % Use True Type Fonts Instead of Older LaTeX Fonts
+ \IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+
+\fi % end if pdflatex is used
+
+% for correct jump positions whe clicking on a link to a float
+\usepackage[figure]{hypcap}
+
+% preamble stuff
+\newcommand{\nih@PIname}{Oakes, Robert Stilman}
+\newcommand{\piname}[1]{\renewcommand{\nih@PIname}{#1}}
+\makeatletter
+
+% constants
+\newcommand{\nih@sillysize}{\scriptsize}
+
+% set the page style
+\pagestyle{fancy}
+\chead{\fancyplain{}{%
+        \ifthenelse{\boolean{nih@blank}}%
+            {}% fi
+            {%
+                {{\sf\scriptsize Principal Investigator/Program Director%
+                    (Last, First, Middle):}}%
+            }% esle
+    }
+}
+\rhead{\fancyplain{}{%
+        \ifthenelse{\boolean{nih@blank}}%
+            {\ \ \ {\nih@PIname}\ \ \ \ \ }% fi
+            {%
+                \underline{\ \ \ {\nih@PIname}\ \ \ \ \ }%
+            }% esle
+    }
+}
+\lhead{\fancyplain{}{\nih@kk}}
+\lfoot{\fancyplain{}{%
+        \ifthenelse{\boolean{nih@blank}}%
+            {}% fi
+            {\sf\footnotesize PHS 398/2590 (Rev.~09/04)\\}% esle
+    }
+}
+\cfoot{\ifthenelse{\boolean{nih@blank}}%
+        {\thepage}% fi
+        {\sf\footnotesize{Page}}% esle
+    \ \underline{\ \ \ {\sf\thepage}\ \ \ }%
+}
+\rfoot{\fancyplain{}%
+    {\sf\footnotesize{\textbf{Continuation Format Page}}}%
+}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.75pt}
+
+\usepackage{amsfonts}
+\usepackage{denselists}
+
+% Two Column Control
+\newif\ifdotwocol
+\dotwocoltrue
+\long\def\twocol#1#2{\ifdotwocol{#1}\else{#2}\fi}
+%%%
+
+\def\mybeforeequation{\footnotesize}
+\def\myafterequation{\renewcommand\baselinestretch{1.1}}
+%%%
+
+\def\citeusmark{$^{\textstyle \star}$}
+\def\citeus#1#2{\cite{#1}}
+
+\def\crow#1#2{#2}
+
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{boxedminipage}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{url}
+
+\def\Paper{grant application}
+\def\paper{application}
+\def\refappendix{Sec.}
+
+\def\poster{(Poster)}
+
+\long\def\todo#1{{\bf{To do:}} #1}
+
+\def\ICRA{IEEE International Conference on Robotics and Automation (ICRA)}
+\long\def\squeezable#1{#1}
+\def\a5{5}
+
+\def\mycaptionsize{\footnotesize}
+\def\mycodesize{\footnotesize}
+\def\myeqnsize{\small}
+
+\def\sheading#1{{\bf #1:}\ }
+\def\sheading#1{\subsubsection{#1}}
+
+\def\ssheading#1{\noindent {\bf #1.}\ } 
+
+\newtheorem{hypothesis}{Hypothesis}
+\long\def\hyp#1{\begin{hypothesis} #1 \end{hypothesis}}
+
+\def\cbk#1{[{\em #1}]}
+
+\def\R{\mathbb{R}}
+\def\midv{\mathop{\,|\,}}
+\def\Fscr{\mathcal{F}}
+\def\Gscr{\mathcal{G}}
+\def\Sscr{\mathcal{S}}
+\def\set#1{{\{#1\}}}
+\def\edge{\!\rightarrow\!}
+\def\dedge{\!\leftrightarrow\!}
+\newcommand{\EOP}{\nolinebreak[1]~~~\hspace*{\fill} $\Box$\vspace*{\parskip}\vspace*{1ex}}
+
+\newcommand{\mybibitem}[1]{\bibitem{#1} 
+\label{mybiblabel:#1}}
+\newcommand{\BC}{[}
+\newcommand{\EC}{]}
+\newcommand{\mycite}[1]{\ref{mybiblabel:#1}\nocite{#1}}
+\newcommand{\starcite}[1]{\ref{mybiblabel:#1}\citeusmark\nocite{#1}}
+
+
+\def\degree{$^\circ$}
+\def\R{\mathbb{R}}
+\def\Fscr{\mathcal{F}}
+\def\set#1{{\{#1\}}}
+\def\edge{\!\rightarrow\!}
+\def\dedge{\!\leftrightarrow\!}
+
+\long\def\gobble#1{}
+\def\Jigsaw{{\sc Jigsaw}}
+\def\ahelix{\ensuremath{\alpha}-helix}
+\def\ahelices{\ensuremath{\alpha}-helices}
+\def\ahelical{$\alpha$-helical}
+\def\bstrand{\ensuremath{\beta}-strand}
+\def\bstrands{\ensuremath{\beta}-strands}
+\def\bsheet{\ensuremath{\beta}-sheet}
+\def\bsheets{\ensuremath{\beta}-sheets}
+\def\hone{{\ensuremath{^1}\rm{H}}}
+\def\htwo{{$^{2}$H}}
+\def\cthir{{\ensuremath{^{13}}\rm{C}}}
+\def\nfif{{\ensuremath{^{15}}\rm{N}}}
+\def\hn{{\rm{H}\ensuremath{^\mathrm{N}}}}
+\def\hnone{{\textup{H}\ensuremath{^1_\mathrm{N}}}}
+\def\ca{{\rm{C}\ensuremath{^\alpha}}}
+\def\catwel{{\ensuremath{^{12}}\rm{C}\ensuremath{^\alpha}}}
+\def\ha{{\rm{H}\ensuremath{^\alpha}}}
+\def\cb{{\rm{C}\ensuremath{^\beta}}}
+\def\hb{{\rm{H}\ensuremath{^\beta}}}
+\def\hg{{\rm{H}\ensuremath{^\gamma}}}
+\def\dnn{{\ensuremath{d_{\mathrm{NN}}}}}
+\def\dan{{\ensuremath{d_{\alpha \mathrm{N}}}}}
+\def\jconst{{\ensuremath{^{3}\mathrm{J}_{\mathrm{H}^{\mathrm{N}}\mathrm{H}^{\alpha}}}} }
+\def\cbfb{{CBF-$\beta$}}
+
+\newtheorem{defn}{Definition}
+\newtheorem{claim}{Claim}
+
+    \gobble{
+    \psfrag{CO}[][]{\colorbox{white}{C}}
+    \psfrag{OO}[][]{\colorbox{white}{O}}
+    \psfrag{CA}[][]{\colorbox{white}{\ca}}
+    \psfrag{HA}[][]{\colorbox{white}{\ha}}
+    \psfrag{CB}[][]{\colorbox{white}{\cb}}
+    \psfrag{HB}[][]{\colorbox{white}{\hb}}
+    \psfrag{HN}[][]{\colorbox{white}{\hn}}
+    \psfrag{N15}[][]{\colorbox{white}{\nfif}}
+    \psfrag{dnn}[][]{\dnn}
+    \psfrag{dan}[][]{\dan}
+    \psfrag{phi}[][]{$\phi$}
+    }
+
+\newenvironment{closeenumerate}{\begin{list}{\arabic{enumi}.}{\topsep=0in\itemsep=0in\parsep=0in\usecounter{enumi}}}{\end{list}}
+\def\CR{\hspace{0pt}}           % ``invisible'' space for line break
+
+\newif\ifdbspacing
+
+\dbspacingfalse  % For normal spacing
+
+\ifdbspacing
+ \doublespacing
+ \newcommand{\capspacing}{\doublespace\mycaptionsize}
+\else
+ \newcommand{\capspacing}{\mycaptionsize}
+\fi
+
+\def\rulefigure{\smallskip\hrule}
+
+\def\codesize{\small}
+
+% Can use macros \be, \ee, \en as shortcuts
+%  for \begin{enumerate}, \end{enumerate}, \item
+%  respectively.
+
+\def\be{\begin{enumerate}}   % Begin Enumerate
+\def\ee{\end{enumerate}}     % End Enumerate
+\def\en{\item}               % ENtry (item)
+\def\bi{\begin{itemize}}     % Begin Itemize
+\def\ei{\end{itemize}}       % End Itemize
+\def\bv{\begin{verbatim}}    % Begin Verbatim
+\def\ev{\end{verbatim}}      % End Verbatim
+
+\def\matlab{{\sc matlab} }
+\def\amber{{\sc amber} }
+\def\KS{{$K^*$}}
+\def\KSM{{K^*}} % K-Star Math
+\def\KSTM{{\tilde{K}^*}}  % K-Star Tilde Math (appx K*)
+\def\KOP{{$K^{\dagger}_{o}$}}  % K-Star Optimal partial
+\def\KOPM{{K^{\dagger}_{o}}}  % K-Star Optimal partial Math
+\def\KP{{$K^{\dagger}$}}  % K-Star partial
+\def\KPM{{K^{\dagger}}}  % K-Star partial Math
+\def\KTPM{{\tilde{K}^{\dagger}}}  % K-Star Tilde partial Math
+\def\KD{{$K_{_D}$}}
+\def\KA{{$K_{_A}$}}
+\def\qpM{{q_{_P}}}
+\def\qlM{{q_{_L}}}
+\def\qplM{{q_{_{PL}}}}
+\def\qSplM{{q^*_{_{PL}}}}
+\def\KSO{{$K^*_{o}$}} % K-Star Optimal
+\def\KSOM{{K^*_{o}}}  % K-Star Optimal Math
+\def\CBFB{{CBF-$\beta$}}   % Core binding factor beta
+\def\argmin{\mathop{\mathrm{argmin}}}
+\def\rhl#1{{\em \underline{RYAN}: *\{{#1}\}*}}
+\def\set#1{{\left\{ #1 \right\}}}
+\def\Escr{{\mathcal{E}}}
+\def\Jscr{{\mathcal{J}}}
+\def\Kscr{{\mathcal{K}}}
+\def\th{{$^{{\mathrm{th}}}$}}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\end_preamble
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize 11
+\spacing single
+\use_hyperref true
+\pdf_author "Rob Oakes"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue"
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+<Proposal Title>
+\end_layout
+
+\begin_layout Author
+<Author Name>
+\end_layout
+
+\begin_layout Date
+<Date>
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This file uses a special header and footer that displays the name of the
+ principal investigator (PI).
+ The code to modify the header and footer can be found in the document LaTeX
+ preamble.
+ To change, click on: 
+\series bold
+Document
+\series default
+-> 
+\series bold
+Settings
+\series default
+ -> 
+\series bold
+LaTeX Preamble
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
