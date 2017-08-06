@@ -1,0 +1,3999 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass informs3
+\begin_preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author template for Operations Research (opre) for articles with e-companion (EC)
+%% Mirko Janc, Ph.D., INFORMS, mirko.janc@informs.org
+%% ver. 0.96, 11/30/2012
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[opre,blindrev]{informs3} % current default for manuscript submission
+
+
+\DoubleSpacedXI % Made default 4/4/2014 at request
+%%\OneAndAHalfSpacedXI % current default line spacing
+%%\OneAndAHalfSpacedXII 
+%%\DoubleSpacedXII
+
+% If hyperref is used, dvi-to-ps driver of choice must be declared as
+%   an additional option to the \documentclass. For example
+%\documentclass[dvips,opre]{informs3}      % if dvips is used 
+%\documentclass[dvipsone,opre]{informs3}   % if dvipsone is used, etc. 
+
+%%% OPRE uses endnotes
+\usepackage{endnotes}
+\let\footnote=\endnote
+\let\enotesize=\normalsize
+\def\notesname{Endnotes}%
+\def\makeenmark{\hbox to1.275em{\theenmark.\enskip\hss}}
+\def\enoteformat{\rightskip0pt\leftskip0pt\parindent=1.275em
+  \leavevmode\llap{\makeenmark}}
+
+% Private macros here (check that there is no clash with the style)
+
+% Natbib setup for author-year style
+\bibpunct[, ]{(}{)}{,}{a}{}{,}%
+ \def\bibfont{\small}%
+ \def\bibsep{\smallskipamount}%
+ \def\bibhang{24pt}%
+ \def\newblock{\ }%
+ \def\BIBand{and}%
+
+%% Setup of theorem styles. Outcomment only one. 
+%% Preferred default is the first option.
+\TheoremsNumberedThrough     % Preferred (Theorem 1, Lemma 1, Theorem 2)
+%\TheoremsNumberedByChapter  % (Theorem 1.1, Lema 1.1, Theorem 1.2)
+\ECRepeatTheorems
+
+%% Setup of the equation numbering system. Outcomment only one.
+%% Preferred default is the first option.
+\EquationsNumberedThrough    % Default: (1), (2), ...
+%\EquationsNumberedBySection % (1.1), (1.2), ...
+
+% In the reviewing and copyediting stage enter the manuscript number.
+%\MANUSCRIPTNO{} % When the article is logged in and DOI assigned to it,
+                 %   this manuscript number is no longer necessary
+
+%%%%%%%%%%%%%%%%
+\end_preamble
+\options opre,nonblindrev
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Outcomment only when entries are known.
+ Otherwise leave as is and
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%   default values will be used.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+VOLUME{00}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+NO{0}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+MONTH{Xxxxx}% (month or a similar seasonal id)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+YEAR{0000}% e.g., 2005
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+FIRSTPAGE{000}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+LASTPAGE{000}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+SHORTYEAR{00}% shortened year (two-digit)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+ISSUE{0000} %
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+LONGFIRSTPAGE{0001} %
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+DOI{10.1287/xxxx.0000.0000}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Author's names for the running heads
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Sample depending on the number of authors;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+RUNAUTHOR{Jones}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+RUNAUTHOR{Jones and Wilson}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+RUNAUTHOR{Jones, Miller, and Wilson}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+RUNAUTHOR{Jones et al.} % for four or more authors
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Enter authors following the given pattern:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+RUNAUTHOR
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Slippery and Arinella
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Title or shortened title suitable for running heads.
+ Sample:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+RUNTITLE{Bundling Information Goods of Decreasing Value}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Enter the (shortened) title:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+RUNTITLE
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Tis a Butter Place
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Full title.
+ Sample:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+TITLE{Bundling Information Goods of Decreasing Value}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Enter the full title:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+TITLE
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Tis a Far, Far Butter Place
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Block of authors and their affiliations starts here:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% NOTE: Authors with same affiliation, if the order of authors allows,
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%   should be entered in ONE field, separated by a comma.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%   
+\backslash
+EMAIL field can be repeated if more than one author
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ARTICLEAUTHORS
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+AUTHOR
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Snidely Slippery
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+AFF
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Department of Bread Spread Engineering, Dairy University, Cowtown, IL 60208,
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+EMAIL
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+slippery@dairy.edu
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%, 
+\backslash
+URL{}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+AUTHOR
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Marg Arinella
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+AFF
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Institute for Food Adulteration, University of Food Plains, Food Plains,
+ MN 55599, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+EMAIL
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+m.arinella@adult.ufp.edu
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Enter all authors
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% end of the block
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ABSTRACT
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+This paper gives an unbelievably detailed history of margarine in America.
+ Why then, do you ask, is the title about butter? Well, who ever heard of
+ a far, far margarine place? I mean, come on; you have to give the author
+ some poetic license.
+ Otherwise every paper would read like stereo instructions.
+ And who ever reads stereo instructions? Anyway, the paper is about butter...I
+ mean margarine! 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Enter your abstract
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Sample
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+KEYWORDS{deterministic inventory theory; infinite linear programming duality;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%  existence of optimal policies; semi-Markov decision process; cyclic schedule}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Fill in data.
+ If unknown, outcomment the field
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+KEYWORDS
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+butter, margarine, silliness
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+HISTORY
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+This paper was first submitted on April 12, 1922 and has been with the authors
+ for 83 years for 65 revisions.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Samples of sectioning (and labeling) in OPRE
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% NOTE: (1) 
+\backslash
+section and 
+\backslash
+subsection do NOT end with a period
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%       (2) 
+\backslash
+subsubsection and lower need end punctuation
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%       (3) capitalization is as shown (title style).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+section{Introduction.}
+\backslash
+label{intro} %%1.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+subsection{Duality and the Classical EOQ Problem.}
+\backslash
+label{class-EOQ} %% 1.1.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+subsection{Outline.}
+\backslash
+label{outline1} %% 1.2.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+subsubsection{Cyclic Schedules for the General Deterministic SMDP.}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%  
+\backslash
+label{cyclic-schedules} %% 1.2.1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+section{Problem Description.}
+\backslash
+label{problemdescription} %% 2.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Text of your paper here
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Although it has been around for over a century, margarine was not always
+ the preferred tablespread in the United States.
+ In 1930, per capita consumption of margarine was only 2.6 pounds (vs.
+ 17.6 pounds of butter).
+ Times have changed for the better, though (if you're a margarine manufacturer,
+ that is).
+ Today, per capita consumption of margarine in the United States is 8.3 pounds
+ (including vegetable oil spreads) whereas butter consumption is down to
+ about 4.2 pounds.
+ Furthermore, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "frontier"
+
+\end_inset
+
+, it is always butter, not margarine, that is traded off against guns.
+ This leads to the announcement of our result.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "marg-butt-th"
+
+\end_inset
+
+ In a reverse dictionary, 
+\begin_inset Formula $(\mbox{\bi marg}\succ\mbox{\bi butt\/}\;\land\;\mbox{\bi arine}\succ\mbox{\bi er})$
+\end_inset
+
+.
+ Moreover, continuous reading of a compact subset of the dictionary attains
+ the minimum of patience at the moment of giving up.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The proof will be given in the e-companion to this paper.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Sample-Figure.eps
+	height 2in
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Production Possibilities Frontier.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "frontier"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Motivation
+\end_layout
+
+\begin_layout Standard
+Margarine or butter? According to the website of the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%National Association of Margarine Manufacturers (2005)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "namm"
+
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Despite the recommendations of health professionals and leading health organizat
+ions to choose margarine, many consumers are confused.
+\begin_inset Quotes erd
+\end_inset
+
+ But whether or not they are confused, consumers are voting with their pocketboo
+ks.
+ The 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%American Butter Institute (2005)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abi"
+
+\end_inset
+
+, whose slogan is 
+\begin_inset Quotes eld
+\end_inset
+
+Things are better with butter!
+\begin_inset Quotes erd
+\end_inset
+
+, presents many tempting recipes on its website, but also reports declining
+ sales in its marketing releases.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{hypothesis}
+\end_layout
+
+\end_inset
+
+ Things are better with butter.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{hypothesis}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Indeed, even though a reputed chain email letter claims that margarine is
+ 
+\begin_inset Quotes eld
+\end_inset
+
+but one molecule from being plastic
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%(BreakTheChain.org)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "btc"
+
+\end_inset
+
+, American consumers appear to be sliding away from butter.
+ Given this trend, a historical review of margarine is in order.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Many consumers are confused.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Whether or not the consumers are confused, they are voting with their pocketboo
+ks.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ American consumers are sliding away from butter.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Historical Timeline
+\end_layout
+
+\begin_layout Standard
+The following are milestones in the history of margarine as reported by
+ the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%National Association of Margarine Manufacturers (2005b)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "namm2"
+
+\end_inset
+
+.
+ Note that they have been transcribed verbatim here, which is generally
+ bad practice.
+ Even if the material is explicitly indicated as a quotation, having this
+ much content from another source will almost certainly result in rejection
+ of the paper for lack of originality.
+\end_layout
+
+\begin_layout Standard
+But if not called out 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+em
+\end_layout
+
+\end_inset
+
+ as a quotation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+, lifting even a single sentence (or less) from another source is plagiarism,
+ even if the source is cited.
+ Plagiarism is a very serious offense, which will not only lead to rejection
+ of a paper, but will also bring more serious sanctions, such as being banned
+ from the journal, notification of your dean or department chair, etc.
+ So don't do it!
+\end_layout
+
+\begin_layout Standard
+There are many on-line resources to help determine what constitutes plagiarism
+ and how to avoid (see, e.g., CollegeBoard.com).
+ But the simplest rule to follow is 
+\begin_inset Quotes eld
+\end_inset
+
+when it doubt, call it out.
+\begin_inset Quotes erd
+\end_inset
+
+ That is, make very plain what comes from other sources, in properly cited
+ word-for-word quotations or paraphrases.
+\end_layout
+
+\begin_layout Section
+1800s
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1870
+\end_layout
+
+\end_inset
+
+ Margarine was created by a Frenchman from Provence, France – Hippolyte
+ Mège-Mouriez – in response to an offer by the Emperor Louis Napoleon III
+ for the production of a satisfactory substitute for butter.
+ To formulate his entry, Mège-Mouriez used margaric acid, a fatty acid component
+ isolated in 1813 by Michael Chevreul and named because of the lustrous
+ pearly drops that reminded him of the Greek word for pearl – margarites.
+ From this word, Mège-Mouriez coined the name margarine for his invention
+ that claimed the Emperor's prize.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1873
+\end_layout
+
+\end_inset
+
+ An American patent was granted to Mège-Mouriez who intended to expand his
+ French margarine factory and production to the United States.
+ While demand for margarine was strong in northern Europe and the potential
+ equally as promising in the U.S., Mège-Mouriez's operations nevertheless
+ failed and he died obscurely.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1878
+\end_layout
+
+\end_inset
+
+ Unilever began manufacturing margarine in Europe.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1871-73
+\end_layout
+
+\end_inset
+
+ The U.
+ S.
+ Dairy Company in New York City began production of "artificial butter."
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1877
+\end_layout
+
+\end_inset
+
+ State laws requiring identification of margarine were passed in New York
+ and Maryland as the dairy industry began to feel the impact of this rapidly
+ growing product
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1881
+\end_layout
+
+\end_inset
+
+ Improvements to Mège-Mouriez's formulation were made; U.S.
+ Dairy created a subsidiary, the Commercial Manufacturing Company, to produce
+ several million pounds annually of this new product.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1885
+\end_layout
+
+\end_inset
+
+ When a court voided a ban on margarine in New York, dairy militants turned
+ their attention to Washington, resulting in Congressional passage of the
+ Margarine Act of 1886.
+ The Act imposed a tax of two cents per pound on margarine and required
+ expensive licenses for manufacturers, wholesalers and retailers of margarine.
+ President Grover Cleveland, from the dairy state of New York, signed the
+ law, describing it as a revenue measure.
+ However, the 1886 law failed to slow the sale of margarine principally
+ because it did not require identification of margarine at the point of
+ sale and margarine adversaries turned their attention back to the states.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1886
+\end_layout
+
+\end_inset
+
+ More than 30 manufacturing facilities were reported to be engaged in the
+ production of margarine.
+ Among them were Armour and Company of Chicago and Lever Brothers of New
+ York.
+ Seventeen states required the product to be specifically identified as
+ margarine.
+ Various state laws to control margarine were passed in a number of states,
+ but were not enforced.
+ Later that year, New York and New Jersey prohibited the manufacture and
+ sale of yellow-colored margarine.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+1900s
+\end_layout
+
+\begin_layout Subsection
+Before the End of WWII
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1902
+\end_layout
+
+\end_inset
+
+ 32 states and 80% of the U.S.
+ population lived under margarine color bans.
+ While the Supreme Court upheld such bans, it did strike down forced coloration
+ (pink) which had begun in an effort to get around the ban on yellow coloring.
+ During this period coloring in the home began, with purveyors providing
+ capsules of food coloring to be kneaded into the margarine.
+ This practice continued through World War II.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1902
+\end_layout
+
+\end_inset
+
+ Amendments to the Federal Margarine Act raised the tax on colored margarine
+ five-fold, but decreased licensing fees for white margarine.
+ But demand for colored margarine remained so strong, that bootleg colored
+ margarine flourished.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1904
+\end_layout
+
+\end_inset
+
+ Margarine production suffered and consumption dropped from 120 million
+ pounds in 1902 to 48 million.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1910
+\end_layout
+
+\end_inset
+
+ Intense pressure by competitors to keep prices low and new product innovations,
+ as well as dairy price increases, returned production levels of margarine
+ back to 130 million pounds.
+ The Federal tax remained despite many efforts to repeal it, but consumption
+ grew gradually in spite of it.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1920
+\end_layout
+
+\end_inset
+
+ With America's entry into World War I, the country began to experience
+ a fat shortage and a sharp increase in the cost of living, both factors
+ in driving margarine consumption to an annual per capita level of 3.5 pounds.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1930
+\end_layout
+
+\end_inset
+
+ The Margarine Act was again amended to place the Federal tax on naturally-color
+ed (darkened with the use of palm oil) as well as artificially-colored margarine.
+ During the Depression dairy interests again prevailed upon the states to
+ enact legislation equalizing butter and margarine prices.
+ Consumers reacted and consumption of margarine dropped to an annual per
+ capita level of 1.6 pounds.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1932
+\end_layout
+
+\end_inset
+
+ Besides Federal taxes and licenses, 27 states prohibited the manufacture
+ or sale of colored margarine, 24 imposed some kind of consumer tax and
+ 26 required licenses or otherwise restricted margarine sales.
+ The Army, Navy and other Federal agencies were barred from using margarine
+ for other than cooking purposes.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1941
+\end_layout
+
+\end_inset
+
+ Through production innovations, advertising and improved packaging, margarine
+ consumption regained lost ground.
+ A Federal standard was established recognizing margarine as a spread of
+ its own kind.
+ With raised awareness of margarine's health benefits from a 1941 National
+ Nutrition Conference, consumers began to take notice of restrictions on
+ margarine that were keeping the product from them and artificially inflating
+ the price.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1943
+\end_layout
+
+\end_inset
+
+ State taxes on margarine were repealed in Oklahoma.
+ The courts removed color barriers in other states shortly after World War
+ II (see 
+\begin_inset CommandInset citation
+LatexCommand citealt
+key "tjp"
+
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+After the End of WWII
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1947
+\end_layout
+
+\end_inset
+
+ Residual war shortages of butter sent it to a dollar a pound and Margarine
+ Act repeal legislation was offered from many politicians.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1950
+\end_layout
+
+\end_inset
+
+ Some of the more popular brands prior up until now were Cloverbloom, Mayflower,
+ Mazola, Nucoa, Blue Plate, Mrs.
+ Filbert's, Parkay, Imperial, Good Luck, Nu-Maid, Farmbelle, Shedd's Safflower,
+ Churngold, Blue Bonnet, Fleischmann's, Sunnyland and Table Maid.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1950
+\end_layout
+
+\end_inset
+
+ Margarine taxes and restrictions became the talk of the country.
+ Finally, following a significant effort by the National Association of
+ Margarine Manufacturers, President Truman signed the Margarine Act of 1950
+ on March 23 of that year.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1951
+\end_layout
+
+\end_inset
+
+ The Federal margarine tax system came to an end.
+ Pre-colored margarine was enjoyed by a consumer also pleased with lower
+ prices.
+ Consumption almost doubled in the next twenty years.
+ State color bans, taxes, licenses and other restrictions began to fall.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1960s
+\end_layout
+
+\end_inset
+
+ The first tub margarine and vegetable oil spreads were introduced to the
+ American public.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1967
+\end_layout
+
+\end_inset
+
+ Wisconsin became the last state to repeal restrictions on margarine 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "w"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1996
+\end_layout
+
+\end_inset
+
+ A bill introduced by Rep.
+ Ed Whitfield would signal an end to the last piece of legislation that
+ adversely affects the sale of margarine.
+ Currently, federal law prohibits the retail sale of margarine in packages
+ larger than one pound, as well as detailed requirements regarding the size
+ and types of labeling of margarine and a color requirement.
+ This new legislation would remove these restrictions from the Federal Food,
+ Drug, and Cosmetic Act (FFDCA).
+ Rep.
+ Whitfield's bill, the Margarine Equity Act, is part of HR 3200, the Food
+ and Drug Administration (FDA) reform package and addresses dated requirements
+ that are not applicable to the marketplace.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+bf 1998
+\end_layout
+
+\end_inset
+
+ 125th anniversary of the U.S.
+ patent for margarine
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+em
+\end_layout
+
+\end_inset
+
+ Source:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%National Association of Margarine Manufacturers, 2005
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "namm"
+
+\end_inset
+
+.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{American Butter Institute(2005)}"
+key "abi"
+
+\end_inset
+
+ American Butter Institute (2005) Dairy market report.
+ Retrieved June 14, 2005, www.butterinstitute.org.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{BreakTheChain.org(2005)}"
+key "btc"
+
+\end_inset
+
+ BreakTheChain.org (2005) Is butter better? Retrieved June 14, 2005, http://www.br
+eakthechain.org/
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+break
+\end_layout
+
+\end_inset
+
+ exclusives/margarine.html.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{CollegeBoard.com(2005)}"
+key "cb"
+
+\end_inset
+
+ CollegeBoard.com (2005) How to avoid plagiarism.
+ Retrieved June 14, 2005, http://www.collegeboard.com/
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+break
+\end_layout
+
+\end_inset
+
+ article/0,3868,2-10-0-10314,00.html.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Feldman and Schwan(1990)}"
+key "fs"
+
+\end_inset
+
+ Feldman D, Schwan K (1990) 
+\shape italic
+Who Put the Butter in Butterfly and Other Fearless Investigations into Our
+ Illogical Language
+\shape default
+ (HarperPerennial, New York).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Fontecha et~al.(2006)}"
+key "fo"
+
+\end_inset
+
+ Fontecha J, Mayo I, Toledano G, Juarez M (2006) Triacylglycerol composition
+ of projected designation of origin cheeses during ripening.
+ 
+\shape italic
+J.
+ Dairy Sci.
+
+\shape default
+ 89:882–887.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Geisel(1984)}"
+key "g"
+
+\end_inset
+
+ Geisel TS (1984) 
+\shape italic
+The Butter Battle Book
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ (Random House, New York).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Hodson et~al.(2001)}"
+key "h"
+
+\end_inset
+
+ Hodson L, Skeaff CM, Chisholm W-AH (2001) The effect of replacing dietary
+ saturated fat with polyunsaturated or monounsaturated fat on plasma lipids
+ in free-living young adults.
+ 
+\shape italic
+Eur.
+ J.
+ Clinical Nutrition
+\shape default
+ 55(10):908–915.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{National Association of Margarine Manufacturers(2005a)}"
+key "namm"
+
+\end_inset
+
+ National Association of Margarine Manufacturers (2005a) Margarine in the
+ news.
+ Retrieved June 14, 2005, www.margarine.org.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{National Association of Margarine Manufacturers(2005b)}"
+key "namm2"
+
+\end_inset
+
+ National Association of Margarine Manufacturers (2005b) Margarine in the
+ news.
+ Retrieved Termidor 1, 1790, www.margarine.org.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{www.margarine.org(2005)}"
+key "hist"
+
+\end_inset
+
+ The History of Margarine (2005) www.margarine.org/historyofmargarine.html.
+ Retrieved June 14.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Tholstrup et al.(2006)}"
+key "trbn"
+
+\end_inset
+
+ Tholstrup T, Raff M, Basu S, Nonboe P, Sejrsen K, Staarup EM (2006) Effects
+ of butter and mono\SpecialChar softhyphen
+un\SpecialChar softhyphen
+saturated fatty acids into lipid classes, plasma C-reactive
+ protein, oxidative stress, hemostatic variables, and insulin in healthy
+ young men.
+ 
+\shape italic
+Amer.
+ J.
+ Clinical Nutrition
+\shape default
+ 83:237–243.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Torbica et al.(2006)}"
+key "tjp"
+
+\end_inset
+
+ Torbica A, Jovanovic O, Pajin B (2006) The advantages of solid fat content
+ determination in cocoa butter and cocoa butter equivalents by the Karlshamns
+ method.
+ 
+\shape italic
+Eur.
+ Food Res.
+ Techn.
+
+\shape default
+ 222:385–391.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Williams(1994)}"
+key "w"
+
+\end_inset
+
+ Williams BR (1994) 
+\shape italic
+The Best Butter in the World: A History of Sainsbury's
+\shape default
+ (Ebury Press, London).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Here starts the e-companion (EC)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ECSwitch
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+ECDisclaimer
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%% Main head for the e-companion
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ECHead
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Proofs of Statements
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A general heading for the whole e-companion should be provided here as in
+ the example above this paragraph.
+\end_layout
+
+\begin_layout Section
+Proof of Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "marg-butt-th"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To avoid confusion, theorems that we repeat for readers' convenience will
+ have the same appearance as when they were mentioned for the first time.
+ However, here they should be coded by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb+repeattheorem+
+\end_layout
+
+\end_inset
+
+ instead of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb+theorem+
+\end_layout
+
+\end_inset
+
+ to keep labels/pointers uniquely resolvable.
+ Other predefined theorem-like environments work similarly if they need
+ to be repeated in what becomes the 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+e-companion.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{repeattheorem}
+\end_layout
+
+\end_inset
+
+[Theorem 1.] 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+label{marg-butt-th}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+In a reverse dictionary, 
+\begin_inset Formula $(\mbox{\bi marg}\succ\mbox{\bi butt\/}\;\land\;\mbox{\bi arine}\succ\mbox{\bi er})$
+\end_inset
+
+.
+ Moreover, continuous reading of a compact subset of the dictionary attains
+ the minimum of patience at the moment of giving up.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{repeattheorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Preparatory Material
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "aux-lem1"
+
+\end_inset
+
+ In a reverse dictionary, 
+\begin_inset Formula $\mbox{\bi g}\succ\mbox{\bi t\/}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "aux-lem2"
+
+\end_inset
+
+ In a reverse dictionary, 
+\begin_inset Formula $\mbox{\bi e}\succ\mbox{\bi r\/}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+proof
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Proof of Lemmas 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "aux-lem1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "aux-lem2"
+
+\end_inset
+
+.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ See the alphabet and the tebahpla.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+Halmos
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+endproof
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{remark}
+\end_layout
+
+\end_inset
+
+ Note that the title of the proof should be keyed explicitly in each case.
+ Authors can hardly agree on what would be the default proof title, so there
+ is no default.
+ Even 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb+
+\backslash
+proof{Proof.}+
+\end_layout
+
+\end_inset
+
+ should be keyed out.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{remark}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Proof of the Main Result
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+proof
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Proof of Theorem 1.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The first statement is a conseqence of Lemmas
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "aux-lem1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "aux-lem2"
+
+\end_inset
+
+.
+ The rest relies on the fact that the continuous image of a compact set
+ into the reals is a closed interval, thus having a minimum point.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+Halmos
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+endproof
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Sample-Figure.eps
+	height 1.5in
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Production Possibilities Frontier Again.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ECfrontier"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Standard
+Since we didn't do anything original in this paper, we don't actually have
+ any conclusions.
+ But we have to have a conclusions section in here, so we're writing one.
+ Don't the margins look good? How about those section headings? Pretty snappy,
+ eh?
+\end_layout
+
+\begin_layout Standard
+However, just because we didn't produce any results, doesn't mean that there
+ isn't good butter re-search going on out there.
+ Many researchers 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%(e.g., Tholstrup et al.
+ 2006, Hodson et al.
+ 2001)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+(e.g., 
+\begin_inset CommandInset citation
+LatexCommand citealt
+key "trbn"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citealt
+key "h"
+
+\end_inset
+
+) continue to push out the envelope of our understanding of butter and its
+ health effects.
+ Others are focusing on related products, such as cheese 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%(see, e.g., Fontecha et al.
+ 2006).
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+(see, e.g., 
+\begin_inset CommandInset citation
+LatexCommand citealt
+key "fo"
+
+\end_inset
+
+).
+ Still others are investigating the linguistic 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%(Feldman and Schwan 1990) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "fs"
+
+\end_inset
+
+ and sociopolitical 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%(Geisel 1984) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "g"
+
+\end_inset
+
+ implications of butter.
+ So butter remains a hot research area with lots of potential for the future.
+\end_layout
+
+\begin_layout Standard
+All the potential in the world won't amount to much if research isn't cited
+ correctly, though.
+ Make sure you include complete citation information for your references,
+ including publication or re-trieval dates for website citations, publication
+ year and volume and issue numbers for journal articles, publisher names
+ and locations for books, reports, and conference proceedings, and page
+ numbers for eve-rything, but especially for direct quotes.
+ For citations of unpublished work, you need to include the date of update,
+ as well as the name and address of the organization that sponsored the
+ work.
+ Take a look at the reference section below to see how references should
+ be formatted.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Appendix here
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Options are (1) APPENDIX (with or without general title) or
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%             (2) APPENDICES (if it has more than one unrelated sections)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Outcomment the appropriate case if necessary
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+begin{APPENDIX}{<Title of the Appendix>}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+end{APPENDIX}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%   or
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+begin{APPENDICES}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+section{<Title of Section A>}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+section{<Title of Section B>}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% etc
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+end{APPENDICES}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Acknowledgments here
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ACKNOWLEDGMENT
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The authors gratefully acknowledge the existence of the Journal of Irreproducibl
+e Results and the support of the Society for the Preservation of Inane Research.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% References here (outcomment the appropriate case)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% CASE 1: BiBTeX used to constantly update the references
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%   (while the paper is being written).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+bibliographystyle{informs2014} % outcomment this and next line in Case 1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+bibliography{<your bib file(s)>} % if more than one, comma separated
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% CASE 2: BiBTeX used to generate mypaper.bbl (to be further fine tuned)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+input{mypaper.bbl} % outcomment this line in Case 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%If you don't use BiBTex, you can manually itemize references as shown below.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Feldman and Schwan(1990)}"
+key "fs"
+
+\end_inset
+
+ Feldman D, Schwan K (1990) 
+\shape italic
+Who Put the Butter in Butterfly and Other Fearless Investigations into Our
+ Illogical Language
+\shape default
+ (HarperPerennial, New York).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Fontecha et~al.(2006)}"
+key "fo"
+
+\end_inset
+
+ Fontecha J, Mayo I, Toledano G, Juarez M (2006) Triacylglycerol composition
+ of projected designation of origin cheeses during ripening.
+ 
+\shape italic
+J.
+ Dairy Sci.
+
+\shape default
+ 89:882–887.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Geisel(1984)}"
+key "g"
+
+\end_inset
+
+ Geisel TS (1984) 
+\shape italic
+The Butter Battle Book
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+/
+\end_layout
+
+\end_inset
+
+
+\shape default
+ (Random House, New York).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Hodson et~al.(2001)}"
+key "h"
+
+\end_inset
+
+ Hodson L, Skeaff CM, Chisholm W-AH (2001) The effect of replacing dietary
+ saturated fat with polyunsaturated or monounsaturated fat on plasma lipids
+ in free-living young adults.
+ 
+\shape italic
+Eur.
+ J.
+ Clinical Nutrition
+\shape default
+ 55(10):908–915.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Tholstrup et al.(2006)}"
+key "trbn"
+
+\end_inset
+
+ Tholstrup T, Raff M, Basu S, Nonboe P, Sejrsen K, Staarup EM (2006) Effects
+ of butter and mono\SpecialChar softhyphen
+un\SpecialChar softhyphen
+saturated fatty acids into lipid classes, plasma C-reactive
+ protein, oxidative stress, hemostatic variables, and insulin in healthy
+ young men.
+ 
+\shape italic
+Amer.
+ J.
+ Clinical Nutrition
+\shape default
+ 83:237–243.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "{Torbica et al.(2006)}"
+key "tjp"
+
+\end_inset
+
+ Torbica A, Jovanovic O, Pajin B (2006) The advantages of solid fat content
+ determination in cocoa butter and cocoa butter equivalents by the Karlshamns
+ method.
+ 
+\shape italic
+Eur.
+ Food Res.
+ Techn.
+
+\shape default
+ 222:385–391.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

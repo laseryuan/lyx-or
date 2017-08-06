@@ -1,0 +1,6 @@
+## start lyx
+docker run -v $PWD:/home/app/app -it --rm -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY --name lyx lasery/lyx
+
+docker exec -it lyx bash
+
+cp informs3.layout ../.lyx/layouts/

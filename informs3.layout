@@ -1,0 +1,7 @@
+#% Do not delete the line below; configure depends on this 
+#  \DeclareLaTeXClass[informs3]{Article (My Own Headings)}
+#  \DeclareCategory{Scripts}
+
+Format 11
+Input stdclass.inc
+
