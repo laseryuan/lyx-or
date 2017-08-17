@@ -1,5 +1,5 @@
 ## start lyx
-docker run -v $PWD:/home/app/app -it --rm -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY --name lyx lasery/lyx -userdir /home/app/app/.lyx
+docker run -v $PWD/config/texmf:/home/app/texmf -v $PWD:/home/app/app -it --rm -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY --name lyx lasery/lyx -userdir /home/app/app/.lyx
 
 docker exec -it lyx bash
 
@@ -7,3 +7,6 @@ docker exec -it lyx bash
 ./scripts/cfg-lyx.sh
 tools -> reconfig
 docker restart lyx
+
+## compile
+pdflatex Operations-Research-template.tex
