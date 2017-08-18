@@ -8,5 +8,8 @@ docker exec -it lyx bash
 tools -> reconfig
 docker restart lyx
 
+cp /usr/share/lyx/layouts/stdtitle.inc dot_lyx/layouts/
+
 ## compile
 pdflatex Operations-Research-template.tex
+pdflatex convert/or-min.tex
