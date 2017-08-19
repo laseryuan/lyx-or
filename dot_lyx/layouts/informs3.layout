@@ -1,7 +1,8 @@
 #% Do not delete the line below; configure depends on this 
-#  \DeclareLaTeXClass[article]{Article (My Own Headings)}
-#  \DeclareCategory{Scripts}
-
-Format 11
-Input stdclass.inc
-
+#  \DeclareLaTeXClass[informs3]{Operations Research}
+#  \DeclareCategory{Articles}
+ClassOptions
+  Other "opre,nonblindrev"
+End
+# Read the definitions from article.layout
+Input article.layout

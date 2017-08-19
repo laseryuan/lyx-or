@@ -1,12 +1,8 @@
 %% LyX 2.2.3 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[11pt,english]{article}
+\documentclass[opre,nonblindrev,opre,nonblindrev]{informs3}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
-\usepackage[a4paper]{geometry}
-\geometry{verbose,tmargin=3cm,bmargin=1.5cm,lmargin=1.5cm,rmargin=1.5cm}
-\pagestyle{plain}
-\usepackage{babel}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[unicode=true,pdfusetitle,
@@ -17,6 +13,18 @@
 
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% OR template start
+\DoubleSpacedXI % Made default 4/4/2014 at request
+
+\usepackage{endnotes}
+\let\footnote=\endnote
+\let\enotesize=\normalsize
+\def\notesname{Endnotes}%
+\def\makeenmark{$^{\theenmark}$}
+\def\enoteformat{\rightskip0pt\leftskip0pt\parindent=1.75em
+  \leavevmode\llap{\theenmark.\enskip}}
+
+% Private macros here (check that there is no clash with the style)                                                  
 \usepackage{multirow}
 \renewcommand{\multirowsetup}{\centering}
 \usepackage{arydshln}
@@ -31,6 +39,21 @@
 
 % for cross file reference
 \usepackage{xr}
+% Private macros end
+
+% Natbib setup for author-year style
+\usepackage{natbib} 
+ \bibpunct[, ]{(}{)}{,}{a}{}{,}%
+ \def\bibfont{\small}%
+ \def\bibsep{\smallskipamount}%
+ \def\bibhang{24pt}%
+ \def\BIBand{and}%
+
+\TheoremsNumberedThrough     % Preferred (Theorem 1, Lemma 1, Theorem 2)
+\ECRepeatTheorems
+
+\EquationsNumberedThrough    % Default: (1), (2), ... 
+% OR template end
 
 \makeatother
 

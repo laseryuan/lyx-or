@@ -4,8 +4,20 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass informs3
 \begin_preamble
+% OR template start
+\DoubleSpacedXI % Made default 4/4/2014 at request
+
+\usepackage{endnotes}
+\let\footnote=\endnote
+\let\enotesize=\normalsize
+\def\notesname{Endnotes}%
+\def\makeenmark{$^{\theenmark}$}
+\def\enoteformat{\rightskip0pt\leftskip0pt\parindent=1.75em
+  \leavevmode\llap{\theenmark.\enskip}}
+
+% Private macros here (check that there is no clash with the style)                                                  
 \usepackage{multirow}
 \renewcommand{\multirowsetup}{\centering}
 \usepackage{arydshln}
@@ -20,6 +32,21 @@
 
 % for cross file reference
 \usepackage{xr}
+% Private macros end
+
+% Natbib setup for author-year style
+\usepackage{natbib} 
+ \bibpunct[, ]{(}{)}{,}{a}{}{,}%
+ \def\bibfont{\small}%
+ \def\bibsep{\smallskipamount}%
+ \def\bibhang{24pt}%
+ \def\BIBand{and}%
+
+\TheoremsNumberedThrough     % Preferred (Theorem 1, Lemma 1, Theorem 2)
+\ECRepeatTheorems
+
+\EquationsNumberedThrough    % Default: (1), (2), ... 
+% OR template end
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -32,7 +59,7 @@ Style Title
 End
 \end_local_layout
 \language english
-\language_package default
+\language_package none
 \inputencoding auto
 \fontencoding global
 \font_roman "default" "default"
@@ -50,7 +77,7 @@ End
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 11
+\paperfontsize default
 \spacing single
 \use_hyperref true
 \pdf_bookmarks true
@@ -62,8 +89,8 @@ End
 \pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle true
-\papersize a4paper
-\use_geometry true
+\papersize default
+\use_geometry false
 \use_package amsmath 2
 \use_package amssymb 2
 \use_package cancel 1
@@ -76,7 +103,7 @@ End
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
-\biblio_style plain
+\biblio_style 
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -98,7 +125,7 @@ End
 \quotes_language english
 \papercolumns 1
 \papersides 1
-\paperpagestyle plain
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \html_math_output 0
