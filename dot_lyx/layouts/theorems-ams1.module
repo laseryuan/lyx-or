@@ -22,6 +22,6 @@ Counter theorem
 End
 
 Input theorems-order.inc
-Input theorems-ams.inc
+Input theorems-ams1.inc
 Input theorems-starred.inc
 Input theorems-proof.inc

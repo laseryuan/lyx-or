@@ -138,5 +138,42 @@ This study was supported
 In this paper we
 \end_layout
 
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+
+\color black
+This paper is concerned
+\end_layout
+
+\begin_layout Quotation
+
+\color black
+The system 
+\end_layout
+
+\begin_layout Standard
+
+\color black
+A general system 
+\end_layout
+
+\begin_layout Subsection
+Formulation
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Formulation-of-the"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Control
+\end_layout
+
 \end_body
 \end_document
