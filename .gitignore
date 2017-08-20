@@ -3,3 +3,5 @@
 */.dbus/
 */.local/
 */.lyx/
+
+tmp/*

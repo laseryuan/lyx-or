@@ -32,6 +32,12 @@ theorems-ams1
 Style Title
   LatexName             TITLE
 End
+
+Style Abstract
+  InTitle                     1
+  LatexType               Command
+  LatexName             ABSTRACT
+End
 \end_local_layout
 \language english
 \language_package none
@@ -112,6 +118,24 @@ End
 
 \begin_layout Title
 A Method:
+\begin_inset Newline newline
+\end_inset
+
+With Application 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+This study was supported
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+In this paper we
 \end_layout
 
 \end_body
