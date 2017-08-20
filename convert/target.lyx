@@ -172,7 +172,32 @@ name "subsec:Formulation-of-the"
 \end_layout
 
 \begin_layout Theorem
+
+\color blue
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:thm1"
+
+\end_inset
+
+
+\color inherit
 Control
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\textrm{For any }b>0:\textrm{}\begin{cases}
+a=-p & \mbox{ for }x<0\\
+b=h+c^{+} & \mbox{ for }x<b\\
+A=K^{+}
+\end{cases}\label{problem}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
