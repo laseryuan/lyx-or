@@ -4,6 +4,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage{color}
+\usepackage{array}
+\usepackage{float}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -14,6 +16,11 @@
 \usepackage{breakurl}
 
 \makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
  \DoubleSpacedXI % Made default 4/4/2014 at request
 
@@ -97,5 +104,49 @@ A=K^{+}
 
 \endproof
 
-abc
+\subsubsection*{Algorithm. }
+\begin{enumerate}
+\item Computation: 
+
+\begin{enumerate}
+\item Compute: 
+
+\begin{enumerate}
+\item Solve; 
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\subsection{Tests}
+
+In this sub-section 
+
+\begin{table}[H]
+\caption{\label{tab:Numerical-comparison-without-SAGC}Numerical}
+\centering{}%
+\begin{tabular}{|c|c|>{\centering}p{2cm}|c|}
+\hline 
+Case & algorithm & time
+
+(millisecond) & iterations\tabularnewline
+\hline 
+\hline 
+\multirow{2}{1cm}{0} & B & \textcolor{black}{0.197} & \textcolor{black}{3}\tabularnewline
+\cline{2-4} 
+ & F & \textcolor{black}{2940} & 7\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+\textbf{Model:}
+
+$a=0,q=0.56$;
+\theendnotes
+\begin{thebibliography}{}
+
+\bibitem[{American Butter Institute(2005)}]{abi}
+American Butter Institute (2005) Dairy market report. Retrieved June
+14, 2005, www.butterinstitute.org.
+\end{thebibliography}
+
 \end{document}
