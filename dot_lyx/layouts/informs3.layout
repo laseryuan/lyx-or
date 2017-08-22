@@ -34,19 +34,31 @@ EndPreamble
 # Read the definitions from article.layout
 Input article.layout
 
+Style ManuscripNO
+  InPreamble            1
+  LatexType             Command
+  LatexName             MANUSCRIPTNO
+End
+
 Style Title
   LatexName             TITLE
 End
 
+Style ShortTitle
+  InTitle               1
+  LatexType             Command
+  LatexName             RUNTITLE
+End
+
 Style Author
-  InTitle                     1
-  LatexType               Command
+  InTitle               1
+  LatexType             Command
   LatexName             ARTICLEAUTHORS
 End
 
 Style Abstract
-  InTitle                     1
-  LatexType               Command
+  InTitle               1
+  LatexType             Command
   LatexName             ABSTRACT
 End
 
