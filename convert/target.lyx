@@ -92,8 +92,8 @@ End
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
+\cite_engine natbib
+\cite_engine_type authoryear
 \biblio_style 
 \use_bibtopic false
 \use_indices false
@@ -542,8 +542,25 @@ s->S
 
 \end_layout
 
+\begin_layout Standard
+It 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "alvarez2008optimal"
+
+\end_inset
+
+ has been proved by 
+\begin_inset CommandInset citation
+LatexCommand citealt
+key "alvarez2008optimal"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Bibliography
-\labelwidthstring References
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 label "{Alvarez(2008)}"
@@ -556,9 +573,9 @@ Alvarez, L.H.R., J.
  2008.
  On the optimal.
  
-\emph on
+\shape italic
 SIAM Journal
-\emph default
+\shape default
 , 47:703.
 \end_layout
 
