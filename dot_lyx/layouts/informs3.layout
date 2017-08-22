@@ -35,6 +35,9 @@ EndPreamble
 Input article.layout
 
 Style ManuscripNO
+  LabelType             Static
+  Margin                First_Dynamic
+  LabelString           "manuscript no.: "
   InPreamble            1
   LatexType             Command
   LatexName             MANUSCRIPTNO
@@ -45,6 +48,9 @@ Style Title
 End
 
 Style ShortTitle
+  LabelType             Static
+  Margin                First_Dynamic
+  LabelString           "Short title: "
   InTitle               1
   LatexType             Command
   LatexName             RUNTITLE

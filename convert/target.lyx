@@ -39,6 +39,11 @@ Style Proof
     LabelString "FirstMandatoryArg"
   EndArgument
 End
+
+Style ManuscripNO
+   LabelType             Static                                                                                       
+   LabelString           "manuscript no."
+End
 \end_local_layout
 \language english
 \language_package none
@@ -121,6 +126,10 @@ End
 0123456789
 \end_layout
 
+\begin_layout ShortTitle
+A Method
+\end_layout
+
 \begin_layout Title
 A Method:
 \begin_inset Newline newline
@@ -137,10 +146,6 @@ This study was supported
 \end_inset
 
 
-\end_layout
-
-\begin_layout ShortTitle
-A Method
 \end_layout
 
 \begin_layout Author
