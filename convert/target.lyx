@@ -28,6 +28,18 @@
 theorems-ams1
 \end_modules
 \maintain_unincluded_children false
+\begin_local_layout
+Style Proof
+  LatexType             Command
+  LatexName             proof
+  ParagraphGroup        0
+  Argument 1
+    Mandatory 1
+    DefaultArg Proof
+    LabelString "FirstMandatoryArg"
+  EndArgument
+End
+\end_local_layout
 \language english
 \language_package none
 \inputencoding auto

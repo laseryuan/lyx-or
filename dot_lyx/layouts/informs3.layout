@@ -61,13 +61,3 @@ Style Abstract
   LatexType             Command
   LatexName             ABSTRACT
 End
-
-Style Proof
-  LatexType               Command
-  ParagraphGroup     0
-  Argument 1
-    Mandatory 1
-    DefaultArg Proof
-    LabelString "FirstMandatoryArg"
-  EndArgument
-End
