@@ -69,3 +69,23 @@ Style CompanionDocTitle
   LatexType             Command
   LatexName             "ECSwitch \ECHead"
 End
+
+Style RepeatTheorem
+  LatexType             Environment
+  LatexName             repeattheorem
+End
+
+Style RepeatTheorem
+  LabelType             Static
+  LabelString           "RepeatTheorem"
+  Margin                First_Dynamic
+  LabelFont
+    Shape               Up
+    Size                Bold
+  EndFont
+  Argument 1
+    LabelString         "Theorem Title"
+    Tooltip             "Theorem Title for Repeated Theorem"
+    DefaultArg          "Right click to add Theorem Title"
+  EndArgument
+End
