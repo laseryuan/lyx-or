@@ -61,3 +61,11 @@ Style Abstract
   LatexType             Command
   LatexName             ABSTRACT
 End
+
+
+Style CompanionDocTitle
+  CopyStyle             Title
+  InTitle               0
+  LatexType             Command
+  LatexName             "ECSwitch \ECHead"
+End
