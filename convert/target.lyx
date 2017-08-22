@@ -39,21 +39,6 @@ Style Proof
     LabelString "FirstMandatoryArg"
   EndArgument
 End
-
-Style RepeatTheorem
-  LabelType             Static
-  LabelString  "RepeatTheorem"
-  Margin                First_Dynamic
-  LabelFont
-    Shape             Up
-    Size                Bold
-  EndFont
-  Argument 1
-    LabelString    "Theorem Title"
-    Tooltip        "Theorem Title for Repeated Theorem"
-    DefaultArg "Right click to add Theorem Title"
-  EndArgument
-End
 \end_local_layout
 \language english
 \language_package none
@@ -639,6 +624,10 @@ SIAM Journal
 Companion Document Title
 \end_layout
 
+\begin_layout Section
+Introduction
+\end_layout
+
 \begin_layout RepeatTheorem
 \begin_inset Argument 1
 status open
@@ -659,8 +648,15 @@ reference "thm:thm1"
  aaa
 \end_layout
 
-\begin_layout Standard
-a
+\begin_layout Subsection
+Formulation
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Formulation-of-the-1"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout RepeatTheorem
