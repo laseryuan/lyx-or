@@ -28,33 +28,6 @@
 theorems-ams1
 \end_modules
 \maintain_unincluded_children false
-\begin_local_layout
-Style Title
-  LatexName             TITLE
-End
-
-Style Author
-  InTitle                     1
-  LatexType               Command
-  LatexName             ARTICLEAUTHORS
-End
-
-Style Abstract
-  InTitle                     1
-  LatexType               Command
-  LatexName             ABSTRACT
-End
-
-Style Proof
-  LatexType               Command
-  ParagraphGroup     0
-  Argument 1
-    Mandatory 1
-    DefaultArg Proof
-    LabelString "FirstMandatoryArg"
-  EndArgument
-End
-\end_local_layout
 \language english
 \language_package none
 \inputencoding auto
