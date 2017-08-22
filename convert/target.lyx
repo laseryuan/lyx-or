@@ -33,6 +33,12 @@ Style Title
   LatexName             TITLE
 End
 
+Style Author
+  InTitle                     1
+  LatexType               Command
+  LatexName             ARTICLEAUTHORS
+End
+
 Style Abstract
   InTitle                     1
   LatexType               Command
@@ -137,6 +143,47 @@ status open
 
 \begin_layout Plain Layout
 This study was supported
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AUTHOR{A}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+AFF{University, 
+\backslash
+EMAIL{a@dairy.edu}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+AUTHOR{B}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+AFF{University, 
+\backslash
+EMAIL{b@dairy.edu}}
 \end_layout
 
 \end_inset
@@ -448,8 +495,6 @@ B
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\color black
 0.197
 \end_layout
 
@@ -459,8 +504,6 @@ B
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\color black
 3
 \end_layout
 
@@ -490,8 +533,6 @@ F
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\color black
 2940
 \end_layout
 
