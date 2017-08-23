@@ -37,23 +37,29 @@ Input article.layout
 Style ManuscripNO
   LabelType             Static
   Margin                First_Dynamic
+  LabelFont
+    Color               blue
+  End
   LabelString           "manuscript no.: "
   InPreamble            1
   LatexType             Command
   LatexName             MANUSCRIPTNO
 End
 
-Style Title
-  LatexName             TITLE
-End
-
 Style ShortTitle
   LabelType             Static
   Margin                First_Dynamic
+  LabelFont
+    Color               blue
+  End
   LabelString           "Short title: "
   InTitle               1
   LatexType             Command
   LatexName             RUNTITLE
+End
+
+Style Title
+  LatexName             TITLE
 End
 
 Style Author
@@ -78,6 +84,9 @@ End
 
 Style RepeatTheorem
   LatexType             Environment
+  LabelFont
+    Color               blue
+  End
   LatexName             repeattheorem
 End
 
