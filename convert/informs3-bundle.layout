@@ -171,15 +171,8 @@ End
 Style Lemma
 	CopyStyle             Theorem
 	DependsOn             Theorem
-	LatexName             lem
+	LatexName             lemma
 	LabelString           "Lemma \thetheorem."
-	Preamble
-	  \theoremstyle{plain}
-	  \newtheorem{lem}[thm]{\protect\lemmaname}
-	EndPreamble
-	LangPreamble
-	  \providecommand{\lemmaname}{_(Lemma)}
-	EndLangPreamble
 	BabelPreamble
 	  \addto\captions$$lang{\renewcommand{\lemmaname}{_(Lemma)}}
 	EndBabelPreamble
@@ -189,15 +182,8 @@ End
 Style Proposition
 	CopyStyle             Theorem
 	DependsOn             Theorem
-	LatexName             prop
+	LatexName             proposition
 	LabelString           "Proposition \thetheorem."
-	Preamble
-	  \theoremstyle{plain}
-	  \newtheorem{prop}[thm]{\protect\propositionname}
-	EndPreamble
-	LangPreamble
-	  \providecommand{\propositionname}{_(Proposition)}
-	EndLangPreamble
 	BabelPreamble
 	  \addto\captions$$lang{\renewcommand{\propositionname}{_(Proposition)}}
 	EndBabelPreamble
