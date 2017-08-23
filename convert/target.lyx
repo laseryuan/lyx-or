@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass informs3
+\textclass informs3-bundle
 \begin_preamble
 % Private macros here (check that there is no clash with the style)                                                  
 \usepackage{multirow}
@@ -24,9 +24,6 @@
 % Private macros end
 \end_preamble
 \use_default_options true
-\begin_modules
-theorems-ams1
-\end_modules
 \maintain_unincluded_children false
 \begin_local_layout
 Style Proof

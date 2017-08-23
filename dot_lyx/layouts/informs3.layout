@@ -83,21 +83,16 @@ Style CompanionDocTitle
 End
 
 Style RepeatTheorem
-  LatexType             Environment
-  LabelFont
-    Color               blue
-  End
-  LatexName             repeattheorem
-End
-
-Style RepeatTheorem
   LabelType             Static
   LabelString           "RepeatTheorem"
   Margin                First_Dynamic
   LabelFont
     Shape               Up
     Size                Bold
+    Color               blue
   EndFont
+  LatexType             Environment
+  LatexName             repeattheorem
   Argument 1
     LabelString         "Theorem Title"
     Tooltip             "Theorem Title for Repeated Theorem"

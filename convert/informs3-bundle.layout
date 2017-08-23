@@ -1,0 +1,379 @@
+#% Do not delete the line below; configure depends on this 
+#  \DeclareLaTeXClass[informs3]{Operations Research}
+#  \DeclareCategory{Articles}
+ClassOptions
+  Other "opre,nonblindrev"
+End
+
+Preamble
+  \DoubleSpacedXI % Made default 4/4/2014 at request
+
+  \usepackage{endnotes}
+  \let\footnote=\endnote
+  \let\enotesize=\normalsize
+  \def\notesname{Endnotes}%
+  \def\makeenmark{$^{\theenmark}$}
+  \def\enoteformat{\rightskip0pt\leftskip0pt\parindent=1.75em
+    \leavevmode\llap{\theenmark.\enskip}}
+
+  % Natbib setup for author-year style
+  \usepackage{natbib} 
+   \bibpunct[, ]{(}{)}{,}{a}{}{,}%
+   \def\bibfont{\small}%
+   \def\bibsep{\smallskipamount}%
+   \def\bibhang{24pt}%
+   \def\newblock{\ }%
+   \def\BIBand{and}%
+
+  \TheoremsNumberedThrough     % Preferred (Theorem 1, Lemma 1, Theorem 2)
+  \ECRepeatTheorems
+
+  \EquationsNumberedThrough    % Default: (1), (2), ... 
+EndPreamble
+
+# Read the definitions from article.layout
+Input article.layout
+
+Style ManuscripNO
+  LabelType             Static
+  Margin                First_Dynamic
+  LabelFont
+    Color               blue
+  End
+  LabelString           "manuscript no.: "
+  InPreamble            1
+  LatexType             Command
+  LatexName             MANUSCRIPTNO
+End
+
+Style ShortTitle
+  LabelType             Static
+  Margin                First_Dynamic
+  LabelFont
+    Color               blue
+  End
+  LabelString           "Short title: "
+  InTitle               1
+  LatexType             Command
+  LatexName             RUNTITLE
+End
+
+Style Title
+  LatexName             TITLE
+End
+
+Style Author
+  InTitle               1
+  LatexType             Command
+  LatexName             ARTICLEAUTHORS
+End
+
+Style Abstract
+  InTitle               1
+  LatexType             Command
+  LatexName             ABSTRACT
+End
+
+Style CompanionDocTitle
+  CopyStyle             Title
+  InTitle               0
+  LatexType             Command
+  LatexName             "ECSwitch \ECHead"
+End
+
+Style RepeatTheorem
+  LabelType             Static
+  LabelString           "RepeatTheorem"
+  Margin                First_Dynamic
+  LabelFont
+    Shape               Up
+    Size                Bold
+    Color               blue
+  EndFont
+  LatexType             Environment
+  LatexName             repeattheorem
+  Argument 1
+    LabelString         "Theorem Title"
+    Tooltip             "Theorem Title for Repeated Theorem"
+    DefaultArg          "Right click to add Theorem Title"
+  EndArgument
+End
+
+Requires	amsmath
+
+Counter theorem
+End
+
+Input theorems-order.inc
+
+OutlinerName thm "Definitions & Theorems"
+
+Style Theorem
+	Category              Reasoning
+	Margin                First_Dynamic
+	LatexType             Environment
+	LatexName             theorem
+	NextNoIndent          0
+	ResetArgs             1
+	AddToToc              thm
+	IsTocCaption          1
+	Argument 1
+		LabelString    "Additional Theorem Text"
+		Tooltip        "Additional text appended to the theorem header"
+		IsTocCaption      1
+	EndArgument
+	LabelSep              xx
+	ParIndent             MMM
+	ParSkip               0.4
+	ItemSep               0.2
+	TopSep                0.7
+	BottomSep             0.7
+	ParSep                0.3
+	Align                 Block
+	AlignPossible         Left
+	LabelType             Static
+	LabelCounter          theorem
+	LabelString           "Theorem \thetheorem."
+	Font
+	  Shape               Italic
+	  Size                Normal
+	EndFont
+	LabelFont
+	  Shape               Up
+	  Series              Bold
+	EndFont
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\theoremname}{_(Theorem)}}
+	EndBabelPreamble
+End
+
+
+Style Corollary
+	CopyStyle             Theorem
+	DependsOn             Theorem
+	LatexName             cor
+	LabelString           "Corollary \thetheorem."
+	Preamble
+	  \theoremstyle{plain}
+	  \newtheorem{cor}[thm]{\protect\corollaryname}
+	EndPreamble
+	LangPreamble
+	  \providecommand{\corollaryname}{_(Corollary)}
+	EndLangPreamble
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\corollaryname}{_(Corollary)}}
+	EndBabelPreamble
+End
+
+
+Style Lemma
+	CopyStyle             Theorem
+	DependsOn             Theorem
+	LatexName             lem
+	LabelString           "Lemma \thetheorem."
+	Preamble
+	  \theoremstyle{plain}
+	  \newtheorem{lem}[thm]{\protect\lemmaname}
+	EndPreamble
+	LangPreamble
+	  \providecommand{\lemmaname}{_(Lemma)}
+	EndLangPreamble
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\lemmaname}{_(Lemma)}}
+	EndBabelPreamble
+End
+
+
+Style Proposition
+	CopyStyle             Theorem
+	DependsOn             Theorem
+	LatexName             prop
+	LabelString           "Proposition \thetheorem."
+	Preamble
+	  \theoremstyle{plain}
+	  \newtheorem{prop}[thm]{\protect\propositionname}
+	EndPreamble
+	LangPreamble
+	  \providecommand{\propositionname}{_(Proposition)}
+	EndLangPreamble
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\propositionname}{_(Proposition)}}
+	EndBabelPreamble
+End
+
+
+Style Conjecture
+	CopyStyle             Theorem
+	DependsOn             Theorem
+	LatexName             conjecture
+	LabelString           "Conjecture \thetheorem."
+	Preamble
+	  \theoremstyle{plain}
+	  \newtheorem{conjecture}[thm]{\protect\conjecturename}
+	EndPreamble
+	LangPreamble
+	  \providecommand{\conjecturename}{_(Conjecture)}
+	EndLangPreamble
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\conjecturename}{_(Conjecture)}}
+	EndBabelPreamble
+End
+
+
+Style Fact
+	CopyStyle             Theorem
+	DependsOn             Theorem
+	LatexName             fact
+	LabelString           "Fact \thetheorem."
+	Preamble
+	  \theoremstyle{plain}
+	  \newtheorem{fact}[thm]{\protect\factname}
+	EndPreamble
+	LangPreamble
+	  \providecommand{\factname}{_(Fact)}
+	EndLangPreamble
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\factname}{_(Fact)}}
+	EndBabelPreamble
+End
+
+
+Style Definition
+	CopyStyle             Theorem
+	DependsOn             Theorem
+	LatexName             defn
+	LabelString           "Definition \thetheorem."
+	Font
+	  Shape               Up
+	EndFont
+	LabelFont
+	  Shape               Up
+	  Series              Bold
+	EndFont
+	Preamble
+	  \theoremstyle{definition}
+	  \newtheorem{defn}[thm]{\protect\definitionname}
+	EndPreamble
+	LangPreamble
+	  \providecommand{\definitionname}{_(Definition)}
+	EndLangPreamble
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\definitionname}{_(Definition)}}
+	EndBabelPreamble
+End
+
+
+Style Example
+	CopyStyle             Definition
+	LatexName             example
+	LabelString           "Example \thetheorem."
+	Preamble
+	  \theoremstyle{definition}
+	  \newtheorem{example}[thm]{\protect\examplename}
+	EndPreamble
+	LangPreamble
+	  \providecommand{\examplename}{_(Example)}
+	EndLangPreamble
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\examplename}{_(Example)}}
+	EndBabelPreamble
+End
+
+
+Style Problem
+	CopyStyle             Definition
+	LatexName             problem
+	LabelString           "Problem \thetheorem."
+	Preamble
+	  \theoremstyle{definition}
+	  \newtheorem{problem}[thm]{\protect\problemname}
+	EndPreamble
+	LangPreamble
+	  \providecommand{\problemname}{_(Problem)}
+	EndLangPreamble
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\problemname}{_(Problem)}}
+	EndBabelPreamble
+End
+
+
+Style Exercise
+	CopyStyle             Definition
+	LatexName             xca
+	LabelString           "Exercise \thetheorem."
+	Preamble
+	  \theoremstyle{definition}
+	  \newtheorem{xca}[thm]{\protect\exercisename}
+	EndPreamble
+	LangPreamble
+	  \providecommand{\exercisename}{_(Exercise)}
+	EndLangPreamble
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\exercisename}{_(Exercise)}}
+	EndBabelPreamble
+End
+
+
+Style Solution
+	CopyStyle             Definition
+	LatexName             sol
+	LabelString           "Solution \thetheorem."
+	Preamble
+	  \theoremstyle{definition}
+	  \newtheorem{sol}[thm]{\protect\solutionname}
+	EndPreamble
+	LangPreamble
+		\providecommand{\solutionname}{_(Solution)}
+	EndLangPreamble
+	BabelPreamble
+		\addto\captions$$lang{\renewcommand{\solutionname}{_(Solution)}}
+	EndBabelPreamble
+End
+
+
+Style Remark
+	CopyStyle             Theorem
+	DependsOn             Theorem
+	LatexName             rem
+	LabelString           "Remark \thetheorem."
+	Font
+	  Shape               Up
+	  Size                Normal
+	EndFont
+	LabelFont
+	  Series              Medium
+	  Shape               Italic
+	EndFont
+	Preamble
+	  \theoremstyle{remark}
+	  \newtheorem{rem}[thm]{\protect\remarkname}
+	EndPreamble
+	LangPreamble
+	  \providecommand{\remarkname}{_(Remark)}
+	EndLangPreamble
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\remarkname}{_(Remark)}}
+	EndBabelPreamble
+End
+
+
+Style Claim
+	CopyStyle             Remark
+	LatexName             claim
+	LabelString           "Claim \thetheorem."
+	Preamble
+	  \theoremstyle{remark}
+	  \newtheorem{claim}[thm]{\protect\claimname}
+	EndPreamble
+	LangPreamble
+	  \providecommand{\claimname}{_(Claim)}
+	EndLangPreamble
+	BabelPreamble
+	  \addto\captions$$lang{\renewcommand{\claimname}{_(Claim)}}
+	EndBabelPreamble
+End
+
+Input theorems-case.inc
+Input theorems-refprefix.inc
+Input theorems-starred.inc
+Input theorems-proof.inc
