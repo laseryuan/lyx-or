@@ -99,6 +99,7 @@ Style RepeatTheorem
   EndArgument
 End
 
+# Input theorems-ams.module
 Requires	amsmath
 
 Counter theorem
@@ -106,6 +107,7 @@ End
 
 Input theorems-order.inc
 
+# Input theorems-ams1.inc
 OutlinerName thm "Definitions & Theorems"
 
 Style Theorem
@@ -372,8 +374,21 @@ Style Claim
 	  \addto\captions$$lang{\renewcommand{\claimname}{_(Claim)}}
 	EndBabelPreamble
 End
+# END Input theorems-ams1.inc
 
 Input theorems-case.inc
 Input theorems-refprefix.inc
 Input theorems-starred.inc
 Input theorems-proof.inc
+# END Input theorems-ams.module
+
+Style Proof
+  LatexType             Command
+  LatexName             proof
+  ParagraphGroup        0
+  Argument 1
+    Mandatory 1
+    DefaultArg Proof
+    LabelString "FirstMandatoryArg"
+  EndArgument
+End
