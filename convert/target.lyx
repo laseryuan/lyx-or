@@ -59,6 +59,7 @@
 \pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle true
+\pdf_quoted_options "hypertexnames=false"
 \papersize default
 \use_geometry false
 \use_package amsmath 2
