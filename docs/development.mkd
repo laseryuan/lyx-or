@@ -1,5 +1,5 @@
 ## development
-docker run -v $PWD/dot_lyx/layouts:/home/app/.lyx/layouts -v $PWD/config/texmf:/home/app/texmf -v $PWD:/home/app/app -it --rm -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY --name lyx lasery/lyx
+docker run -v $PWD:/home/app/app -it --rm -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY --name lyx lasery/lyx
 
 docker exec -it lyx bash
 
@@ -12,8 +12,4 @@ ls /usr/share/lyx/layouts/
 
 ## compile
 pdflatex Operations-Research-template.tex
-pdflatex convert/or-min.tex
-pdflatex convert/target.tex
-
-## usage
-docker run -v $WORKDIR:/home/app/app -v $PWD/convert:/usr/share/lyx/templates/informs3 -v $PWD/dot_lyx/layouts:/home/app/.lyx/layouts -v $PWD/config/texmf:/home/app/texmf -it --rm -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY --name lyx lasery/lyx
+pdflatex target.tex
