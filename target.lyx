@@ -6,22 +6,7 @@
 \origin unavailable
 \textclass informs3-bundle
 \begin_preamble
-% Private macros here (check that there is no clash with the style)                                                  
-\usepackage{multirow}
-\renewcommand{\multirowsetup}{\centering}
-\usepackage{arydshln}
-
-\usepackage{lmodern}
-\newcommand{\1}{\mbox{1\hspace{-1mm}I}}
-\numberwithin{equation}{section}
-
-%control the line space in multiline equations
-\usepackage{calc}
-\setlength{\jot}{0mm+3pt}
-
-% for cross file reference
-\usepackage{xr}
-% Private macros end
+% Private macros here (check that there is no clash with the style)
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -294,6 +279,10 @@ The boundary conditions
 
 \begin_layout Proof
 It can be shown.
+\begin_inset Newline newline
+\end_inset
+
+The next line
 \begin_inset ERT
 status open
 
@@ -517,30 +506,7 @@ iterations
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-multirow{2}{1cm}{
-\end_layout
-
-\end_inset
-
 0
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset

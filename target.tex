@@ -14,6 +14,8 @@
  bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=3,
  breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
  {hyperref}
+\hypersetup{
+ hypertexnames=false}
 \usepackage{breakurl}
 
 \makeatletter
@@ -50,22 +52,7 @@
  \EquationsNumberedThrough    % Default: (1), (2), ... 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
-% Private macros here (check that there is no clash with the style)                                                  
-\usepackage{multirow}
-\renewcommand{\multirowsetup}{\centering}
-\usepackage{arydshln}
-
-\usepackage{lmodern}
-\newcommand{\1}{\mbox{1\hspace{-1mm}I}}
-\numberwithin{equation}{section}
-
-%control the line space in multiline equations
-\usepackage{calc}
-\setlength{\jot}{0mm+3pt}
-
-% for cross file reference
-\usepackage{xr}
-% Private macros end
+% Private macros here (check that there is no clash with the style)
 
 \makeatother
 
@@ -112,7 +99,8 @@ A=K^{+}
 \includegraphics[scale=0.6]{a}
 \end{figure}
 
-\proof{Proof}{It can be shown.\Halmos}
+\proof{Proof}{It can be shown.\\
+The next line\Halmos}
 
 \endproof
 \begin{lemma}
@@ -159,7 +147,7 @@ Case & algorithm & time
 (millisecond) & iterations\tabularnewline
 \hline 
 \hline 
-\multirow{2}{1cm}{0} & B & 0.197 & 3\tabularnewline
+0 & B & 0.197 & 3\tabularnewline
 \cline{2-4} 
  & F & 2940 & 7\tabularnewline
 \hline 
