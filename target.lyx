@@ -174,20 +174,24 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-
-\color black
 This paper is concerned
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+a endnote
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Quotation
-
-\color black
 The system 
 \end_layout
 
 \begin_layout Standard
-
-\color black
 A general system 
 \end_layout
 
@@ -203,16 +207,12 @@ name "subsec:Formulation-of-the"
 \end_layout
 
 \begin_layout Theorem
-
-\color blue
 \begin_inset CommandInset label
 LatexCommand label
 name "thm:thm1"
 
 \end_inset
 
-
-\color inherit
 Control 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -628,6 +628,22 @@ key "alvarez2008optimal"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+theendnotes
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
