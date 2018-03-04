@@ -1,3 +1,5 @@
+Lyx template for the journal: Operations Research
+
 ## Type 3 font pdf
 The submission system often requires the pdf to be type 1 font only. But the
 included images could have type 3 fonts built in. Use the following command to
