@@ -2,6 +2,14 @@
 */.config/
 */.dbus/
 */.local/
-*/.lyx/
+.lyx/
 
 tmp/*
+
+*.aux
+*.ent
+*.log
+*.out
+*.lyx~
+
+Sample-Figure-eps-converted-to.pdf
